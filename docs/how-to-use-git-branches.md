@@ -1,10 +1,5 @@
 ```mermaid
----
-config:
-  theme: redux
-  layout: dagre
----
-flowchart TD
+flowchart TD 
  subgraph s1["local main"]
         n4["empty"]
         n6["001 initial commit"]
@@ -29,10 +24,10 @@ flowchart TD
   end
  subgraph s3["actions"]
         n2["push"]
-        rectId["Commit to main:<b>001 initial commit</b>"]
+        rectId["Commit to main: 001 initial commit"]
         n10["create repository"]
-        n11@{ label: "create branch <b style=\"font-weight:\">feature/something-new from main </b>and publish" }
-        n22["Commit to feature/something-new:002 something new"]
+        n11["create branch feature/something-new from main and publish"]
+        n22["Commit to feature/something-new: 002 something new"]
         n30["push"]
         n33["create pull request from feature/something-new to main"]
         n38["merge request feature/something-new to main"]
@@ -60,6 +55,7 @@ flowchart TD
         n42["002"]
         n47["002 something new"]
   end
+
     n4 --> n6
     rectId --> n2
     n5 --> n8
@@ -100,45 +96,47 @@ flowchart TD
     n39 --> n45
     n41 --> n46
     n42 --> n47
-    n21@{ shape: rect}
-    n27@{ shape: rect}
-    n7@{ shape: rect}
-    n20@{ shape: rect}
-    n26@{ shape: rect}
-    rectId@{ shape: tag-proc}
-    n11@{ shape: rect}
-    n12@{ shape: rect}
-    n13@{ shape: rect}
-    n14@{ shape: rect}
-    n18@{ shape: rect}
-    n24@{ shape: rect}
-    n29@{ shape: rect}
-    n15@{ shape: rect}
-    n16@{ shape: rect}
-    n17@{ shape: rect}
-    n19@{ shape: rect}
-    n25@{ shape: rect}
-    style n6 fill:#FFE0B2
-    style n9 fill:#FFE0B2
+
+    n2@{ shape: cyl}
+    n30@{ shape: cyl}
+    rectId:::Aqua
+
+    classDef Aqua stroke-width:1px, stroke-dasharray:none, stroke:#46EDC8, fill:#DEFFF8, color:#378E7A
+
     style n21 fill:#FFE0B2
     style n27 fill:#FFE0B2
     style n7 fill:#FFE0B2
     style n20 fill:#FFE0B2
     style n26 fill:#FFE0B2
-    style rectId fill:#FFE0B2
-    style n22 fill:#FF6D00
+
+    style rectId fill:#FFD600,color:#000000,stroke:#000000
+    style n10 color:#000000,fill:#FFD600
+    style n11 fill:#FFD600,color:#000000,stroke:#000000
+    style n22 stroke:#000000,color:#000000,fill:#FFD600
+    style n33 color:#000000,fill:#FFD600
+    style n38 fill:#FFD600,color:#000000,stroke:#000000
+    style n43 stroke:#000000,color:#000000,fill:#FFD600
+
+    style n12 fill:#FFE0B2
     style n13 fill:#FFE0B2
     style n14 fill:#FFE0B2
     style n18 fill:#FFE0B2
+
     style n24 fill:#FF6D00
     style n29 fill:#FF6D00
+
+    style n15 fill:#FFE0B2
     style n16 fill:#FFE0B2
+    style n17 fill:#FFE0B2
     style n19 fill:#FFE0B2
+
     style n25 fill:#FF6D00
+
     style s1 fill:#C8E6C9
     style s2 fill:#BBDEFB
     style s4 fill:#C8E6C9
     style s5 fill:#BBDEFB
+
     linkStyle 0 stroke:#AA00FF,fill:none
     linkStyle 1 stroke:#2962FF,fill:none
     linkStyle 3 stroke:#2962FF,fill:none
@@ -154,3 +152,5 @@ flowchart TD
     linkStyle 31 stroke:#FFD600,fill:none
     linkStyle 35 stroke:#00C853,fill:none
     linkStyle 36 stroke:#00C853,fill:none
+```
+
